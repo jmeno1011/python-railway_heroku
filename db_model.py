@@ -15,6 +15,6 @@ class BarChart(Base):
         self.Population2000 = population2000
 
     def __repr__(self):
-        return "%s, %s, %d, %d"% (self.City, self.state, self.Population2010, self.Population2000)
-
+        return "{%s: %s, %d, %d}"% (self.state, self.City, self.Population2010, self.Population2000)
+    
 init_db()
