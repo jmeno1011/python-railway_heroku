@@ -3,7 +3,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 # 선언적 접근
-engine = create_engine('mysql+pymysql://{DB_URL}', convert_unicode=True)
+engine = create_engine(f'mysql+pymysql://{DB_URL}', convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
                                          bind=engine))
