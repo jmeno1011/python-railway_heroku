@@ -1,6 +1,10 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from dotenv import dotenv_values
+
+config = dotenv_values(".env")
+DB_URL = config["DB_URL"]
 
 # 선언적 접근
 engine = create_engine(f'mysql+pymysql://{DB_URL}', convert_unicode=True)
